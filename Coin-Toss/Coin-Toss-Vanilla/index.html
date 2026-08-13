@@ -3,18 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Vanilla Coin Toss</title>
+
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" type="image/png" href="./toss-favicon.png" >
+    <link rel="icon" type="image/png" href="/Coin-Toss/toss-favicon.png">
 </head>
+
 <body>
-    <div class="Toss-box">
-        <h1>TOSS THE COIN IF YOU DARE</h1>
-        <p class="description">Heads or Tails?</p>
-        <p>Choose One</p>
-        <button class="Coin-button"><img class="Coin-side-image" src="./HEADS.png" alt="Heads coin"/></button>
-        <button class="Coin-button"><img class="Coin-side-image" src="./TAILS.png" alt="Heads coin"/></button>
+    <div class="toss-box">
+        <h1>COIN TOSS</h1>
+
+        <h4 class="select-text">Pick Heads or Tails?</h4>
+
+        <div class="coin-options">
+            <button class="coin-button">
+                <img
+                    class="coin-side-image"
+                    src="/Coin-Toss/HEADS.png"
+                    alt="Heads coin"
+                >
+            </button>
+
+            <button class="coin-button">
+                <img
+                    class="coin-side-image"
+                    src="/Coin-Toss/TAILS.png"
+                    alt="Tails coin"
+                >
+            </button>
+        </div>
+
+        <button class="toss-button">TOSS</button>
+
+        <h2>You Won!!!</h2>
+
+        <div class="score">
+            <h2>Wins: 1</h2>
+            <h2>Losses: 1</h2>
+        </div>
     </div>
+
     <script src="index.js"></script>
 </body>
 </html>
