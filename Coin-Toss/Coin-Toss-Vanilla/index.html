@@ -17,7 +17,7 @@
         <h4 class="select-text">Pick Heads or Tails?</h4>
 
         <div class="coin-options">
-            <button class="coin-button">
+            <button class="coin-button" value="Heads" onclick=" userMove(this.value)">
                 <img
                     class="coin-side-image"
                     src="/Coin-Toss/HEADS.png"
@@ -25,7 +25,7 @@
                 >
             </button>
 
-            <button class="coin-button">
+            <button class="coin-button" value="Tails" onclick=" userMove(this.value)">
                 <img
                     class="coin-side-image"
                     src="/Coin-Toss/TAILS.png"
@@ -34,7 +34,7 @@
             </button>
         </div>
 
-        <button class="toss-button">TOSS</button>
+        <button class="toss-button" onclick="Toss()">TOSS</button>
 
         <h2>You Won!!!</h2>
 
