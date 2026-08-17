@@ -39,8 +39,15 @@ body {
 }
 
 .coin-button {
-    background-color: transparent;
-    border: none;
+    background-color: lightgray;
+    border-radius: 60px;
+    border: 2px solid gray;
+    padding: 0;
+}
+.coin-button:active{
+    background-color: lightgreen;
+    border-radius: 60px;
+    border: 2px solid gray;
     padding: 0;
 }
 
@@ -55,7 +62,9 @@ body {
     color: aliceblue;
     font-size: medium;
 }
-
+.toss-button:active{
+    background-color: greenyellow;
+}
 .select-text {
     font-weight: normal;
 }

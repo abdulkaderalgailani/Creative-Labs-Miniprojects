@@ -3,39 +3,46 @@ function Toss() {
     console.log("Coin tossed");
 
     computerMove();
-    userMove();
-    checkMove();
+    console.log("computers move: " + computerChoice);
+    console.log("You selected: " + userChoice);
+    checkMove(userChoice, computerChoice);
+    console.log("Results : " +moveResult);
+
 
 }
+
+let userChoice;
+let computerChoice;
+let moveResult;
 
 function computerMove() {
     const tossChance = Math.random() 
-        if (tossChance >= 0.5){
-            return "Heads";
-        } else {
-            return "Tails";
-        };
+    if (tossChance >= 0.5){
+        computerChoice = "Heads";
+    } else {
+        computerChoice = "Tails";
+    }
+    return computerChoice;
 }
 
-function userMove(){
-    if (userMove === "Heads"){
-        return "Heads";
-    } else if (userMove === "Tails"){
-        return "Tails";
+function userMove(move){
+    if (move == "Heads"){
+        userChoice = "Heads";
+    } else if (move == "Tails"){
+        userChoice = "Tails";
     } else {
-        return "Select a move";
+        userChoice = "Select a move";
     }
+    return userChoice;
 }
 // console.log(userMove());
 
 
-function checkMove(){
-    const checkMove = userMove && computerMove;
-
-    if (checkMove == true) {
-        return console.log("You win");
+function checkMove(userChoice, computerChoice){
+    if (userChoice === computerChoice) {
+        moveResult = "You win";
     } else{
-        return console.log('you lost');
+        moveResult = "you lost";
     }
-    return checkMove;
+    return moveResult;  
 }
