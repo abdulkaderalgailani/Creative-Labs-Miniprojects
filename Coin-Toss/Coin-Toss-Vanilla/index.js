@@ -6,12 +6,13 @@ function Toss() {
     console.log("computers move: " + computerChoice);
     console.log("You selected: " + userChoice);
     checkMove(userChoice, computerChoice);
+    
     console.log("Results : " +moveResult);
-
+    document.querySelector('.display-result').innerText = `${moveResult}  \n Your Choice: ${userChoice}`;
 
 }
 
-let userChoice;
+let userChoice = "Select a move";
 let computerChoice;
 let moveResult;
 
@@ -26,9 +27,9 @@ function computerMove() {
 }
 
 function userMove(move){
-    if (move == "Heads"){
+    if (move === "Heads"){
         userChoice = "Heads";
-    } else if (move == "Tails"){
+    } else if (move === "Tails"){
         userChoice = "Tails";
     } else {
         userChoice = "Select a move";
@@ -40,9 +41,12 @@ function userMove(move){
 
 function checkMove(userChoice, computerChoice){
     if (userChoice === computerChoice) {
-        moveResult = "You win";
-    } else{
-        moveResult = "you lost";
+        moveResult = "You Won!!!";
+    } else if(userChoice === "Select a move"){
+        moveResult = "";
+    }
+    else {
+        moveResult = "You Lost!!!";
     }
     return moveResult;  
 }
