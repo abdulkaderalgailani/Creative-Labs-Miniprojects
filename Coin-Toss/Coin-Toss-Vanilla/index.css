@@ -73,4 +73,18 @@ body {
     display: flex;
     justify-content: center;
     gap: 30px;
+    padding: 25px;
+    font-size: medium;
+    
+}
+.reset-button{
+    border: none;
+    border-radius: 40px;
+    background-color: rgb(197, 41, 41);
+    color: white;
+    padding: 15px;
+}
+.reset-button:active{
+    background-color: white;
+    color: red;
 }

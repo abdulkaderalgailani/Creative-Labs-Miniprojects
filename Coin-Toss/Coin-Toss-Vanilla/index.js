@@ -1,20 +1,29 @@
 function Toss() {
     // document.querySelector('.toss-button');
-    console.log("Coin tossed");
-
+    console.log("Coin tossed clicked");
+    if (userChoice === "Select a move"){
+        alert("Select a move");
+        return;
+    }
     computerMove();
-    console.log("computers move: " + computerChoice);
-    console.log("You selected: " + userChoice);
+    console.log("computers move: ", computerChoice);
+    console.log("You selected: ", userChoice);
     checkMove(userChoice, computerChoice);
     
-    console.log("Results : " +moveResult);
+    console.log("Results : ", moveResult);
     document.querySelector('.display-result').innerText = `${moveResult}  \n Your Choice: ${userChoice}`;
+    scoreDisplay(moveResult);
+    document.querySelector('.score').innerText = `Wins: ${scoreBoard.wins} Losses: ${scoreBoard.losses}`
+    console.log(`Score display wins: ${scoreBoard.wins} Score display losses: ${scoreBoard.losses}`);
 
 }
 
 let userChoice = "Select a move";
 let computerChoice;
 let moveResult;
+let scoreBoard = { wins: 0, losses: 0};
+
+
 
 function computerMove() {
     const tossChance = Math.random() 
@@ -42,11 +51,16 @@ function userMove(move){
 function checkMove(userChoice, computerChoice){
     if (userChoice === computerChoice) {
         moveResult = "You Won!!!";
-    } else if(userChoice === "Select a move"){
-        moveResult = "";
-    }
-    else {
+    } else {
         moveResult = "You Lost!!!";
     }
     return moveResult;  
+}
+
+function scoreDisplay(moveResult){
+    if (moveResult === "You Won!!!"){
+        scoreBoard.wins +=1;
+    } else{
+        scoreBoard.losses +=1;
+    }
 }
