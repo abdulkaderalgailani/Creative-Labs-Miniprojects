@@ -23,7 +23,13 @@ let computerChoice;
 let moveResult;
 let scoreBoard = { wins: 0, losses: 0};
 
+function resetScore(){
+    scoreBoard.wins = 0;
+    scoreBoard.losses = 0;
 
+    document.querySelector('.score').innerText = `Wins: ${scoreBoard.wins} Losses: ${scoreBoard.losses}`
+    console.log(`Reset Score - display wins: ${scoreBoard.wins} Score display losses: ${scoreBoard.losses}`);
+}
 
 function computerMove() {
     const tossChance = Math.random() 

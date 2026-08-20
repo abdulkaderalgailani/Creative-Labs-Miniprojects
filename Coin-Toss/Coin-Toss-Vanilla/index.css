@@ -46,9 +46,6 @@ body {
 }
 .coin-button:active{
     background-color: lightgreen;
-    border-radius: 60px;
-    border: 2px solid gray;
-    padding: 0;
 }
 
 .toss-button {
@@ -64,6 +61,7 @@ body {
 }
 .toss-button:active{
     background-color: greenyellow;
+    color: black;
 }
 .select-text {
     font-weight: normal;
