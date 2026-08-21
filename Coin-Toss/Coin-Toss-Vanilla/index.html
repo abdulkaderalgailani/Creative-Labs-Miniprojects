@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Vanilla Coin Toss</title>
 
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="index.css">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/Coin-Toss/toss-favicon.png">
 </head>
 
 <body>
+
+    <!-- ================================
+         MAIN GAME CONTAINER
+    ================================= -->
     <div class="toss-box">
+
+        <!-- Game Title -->
         <h1>COIN TOSS</h1>
 
+
+        <!-- ================================
+             USER SELECTION
+        ================================= -->
         <h4 class="select-text">Pick Heads or Tails?</h4>
 
         <div class="coin-options">
-            <button class="coin-button" value="Heads" onclick=" userMove('Heads')">
+
+            <!-- Heads Button -->
+            <button
+                class="coin-button"
+                value="Heads"
+                onclick="userMove('Heads')"
+            >
                 <img
                     class="coin-side-image"
                     src="/Coin-Toss/HEADS.png"
@@ -25,29 +45,65 @@
                 >
             </button>
 
-            <button class="coin-button" value="Tails" onclick=" userMove('Tails')">
+            <!-- Tails Button -->
+            <button
+                class="coin-button"
+                value="Tails"
+                onclick="userMove('Tails')"
+            >
                 <img
                     class="coin-side-image"
                     src="/Coin-Toss/TAILS.png"
                     alt="Tails coin"
                 >
             </button>
+
         </div>
 
-        <button class="toss-button" onclick="Toss()">TOSS</button>
 
+        <!-- ================================
+             TOSS BUTTON
+        ================================= -->
+        <button
+            class="toss-button"
+            onclick="Toss()"
+        >
+            TOSS
+        </button>
+
+
+        <!-- ================================
+             GAME RESULT
+        ================================= -->
         <h2 class="display-result"></h2>
 
+
+        <!-- ================================
+             SCORE DISPLAY
+        ================================= -->
         <div class="score">
-            <!-- <h2>Wins: 0</h2>
-            <h2>Losses: 0</h2> -->
-            
+            <!-- Score is added using JavaScript -->
         </div>
+
+
+        <!-- ================================
+             RESET BUTTON
+        ================================= -->
         <div>
-             <button class="reset-button" onclick="resetScore()">Reset</button>
+            <button
+                class="reset-button"
+                onclick="resetScore()"
+            >
+                Reset
+            </button>
         </div>
+
     </div>
 
+
+    <!-- JavaScript -->
     <script src="index.js"></script>
+
 </body>
+
 </html>

@@ -1,31 +1,40 @@
-/* -------------------------------
-        COIN TOSS
-
-   Pick Heads or Tails
-
-     [ HEADS ] [ TAILS ]
-
-          [ TOSS ]
-
-       You Won!
-
-     Wins: 3   Losses: 2
-------------------------------- */
+/* =================================
+   PAGE / BODY
+================================= */
 
 body {
     background-color: rgb(242, 169, 100);
     font-family: serif;
+
+    min-height: 100vh;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+
+/* =================================
+   MAIN GAME BOX
+================================= */
+
 .toss-box {
-    color: azure;
     background-color: rgb(54, 129, 243);
+    color: azure;
+
     padding: 50px;
-    margin: 250px;
+
     border: 5px solid #80ff00c6;
     border-radius: 40px;
+
     text-align: center;
 }
+
+
+/* =================================
+   HEADS / TAILS OPTIONS
+================================= */
 
 .coin-options {
     display: flex;
@@ -33,56 +42,97 @@ body {
     gap: 20px;
 }
 
+
+/* =================================
+   COIN IMAGES
+================================= */
+
 .coin-side-image {
     height: 150px;
     border-radius: 50%;
 }
 
+
+/* =================================
+   COIN BUTTONS
+================================= */
+
 .coin-button {
     background-color: lightgray;
-    border-radius: 60px;
+
     border: 2px solid gray;
+    border-radius: 60px;
+
     padding: 0;
 }
-.coin-button:active{
+
+.coin-button:active {
     background-color: lightgreen;
 }
+
+
+/* =================================
+   TOSS BUTTON
+================================= */
 
 .toss-button {
     margin-top: 20px;
     padding: 15px;
 
+    background-color: blueviolet;
+    color: aliceblue;
+
     border: none;
     border-radius: 40px;
 
-    background-color: blueviolet;
-    color: aliceblue;
     font-size: medium;
 }
-.toss-button:active{
+
+.toss-button:active {
     background-color: greenyellow;
     color: black;
 }
+
+
+/* =================================
+   SELECT TEXT
+================================= */
+
 .select-text {
     font-weight: normal;
 }
 
+
+/* =================================
+   SCORE DISPLAY
+================================= */
+
 .score {
     display: flex;
     justify-content: center;
+
     gap: 30px;
     padding: 25px;
+
     font-size: medium;
-    
 }
-.reset-button{
-    border: none;
-    border-radius: 40px;
+
+
+/* =================================
+   RESET BUTTON
+================================= */
+
+.reset-button {
     background-color: rgb(197, 41, 41);
     color: white;
+
+    border: none;
+    border-radius: 40px;
+
     padding: 15px;
 }
-.reset-button:active{
+
+.reset-button:active {
     background-color: white;
     color: red;
 }
